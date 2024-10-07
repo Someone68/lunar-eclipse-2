@@ -90,7 +90,7 @@ function customdis() {
 
 function cloak() {
   let tab = window.open("about:blank");
-  tab.document.body.innerHTML = `<style>*{padding:0;margin:0;}html,body{width:100%;height:100vh}</style><iframe src="https://${window.location.host}" style="border:0px #ffffff none;" name="lunar" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>`;
+  tab.document.body.innerHTML = `<style>*{padding:0;margin:0;}html,body{width:100%;height:100vh}</style><iframe src="https://${window.location.href}" style="border:0px #ffffff none;" name="lunar" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>`;
   location.replace(localStorage.panicurl);
 }
 
