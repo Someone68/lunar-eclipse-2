@@ -89,8 +89,8 @@ function customdis() {
 }
 
 function cloak() {
-  let tab = window.open();
-  tab.document.body.innerHTML = `<!DOCTYPE html><html><head><style>*{padding:0;margin:0;}html,body{width:100%;height:100vh}</style></head><body><iframe src="https://${window.location.href}" style="border:0px #ffffff none;" name="lunar" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe></body></html>`;
+  tab = window.open();
+  tab.window.document.body.innerHTML = `<!DOCTYPE html><html><head><style>*{padding:0;margin:0;}html,body{width:100%;height:100vh}</style></head><body><iframe src="https://${window.location.host}" style="border:0px #ffffff none;" name="lunar" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe></body></html>`;
   location.replace(localStorage.panicurl);
 }
 
