@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lunar Eclipse</title>
+    <link href="../style.css" rel="stylesheet" />
+    <script src="https://ut1l.pages.dev/util.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1abfab8baa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="../assets/logo.png"
+      type="image/png"
+      class="favicon"
+    />
+  </head>
+  <body>
+    <nav class="nav" id="nav">
+      <a href="../index.html">Home</a>
+      <a href="proxy.html">Prxy</a>
+      <a href="games.html">Gxmes</a>
+      <a href="settings.html" class="active">Settings</a>
+      <div class="right">
+        <button class="panic">Panic Switch [`]</button>
+        <p id="time">loading...</p>
+      </div>
+    </nav>
+    <div class="line"></div>
+    <div class="content">
+      <div class="title">
+        <i class="fa-solid fa-moon"></i><br large />
+        <div class="space"></div>
+        Settings
+      </div>
+      <div class="space"></div>
+      <div class="space"></div>
+      <h1 class="mleft space typew" data-text="Disguise Tab"></h1>
+      <button
+        class="mmleft space actionbutton"
+        onclick="disguise('./assets/logo.png', 'Lunar Eclipse')"
+      >
+        Lunar Eclipse</button
+      ><br />
+      <button
+        class="mmleft space actionbutton"
+        onclick="disguise('./assets/google.ico', 'Google')"
+      >
+        Google</button
+      ><br />
+      <button
+        class="mmleft space actionbutton"
+        onclick="disguise('./assets/docs.ico', 'Google Docs')"
+      >
+        Google Docs</button
+      ><br />
+      <button
+        class="mmleft space actionbutton"
+        onclick="disguise('./assets/classroom.png', 'Home')"
+      >
+        Google Classroom</button
+      ><br />
+      <button class="mmleft actionbutton" onclick="customdis()">Custom</button>
+      <div class="space"></div>
+      <h1 class="mleft space typew" data-text="Cloaking"></h1>
+      <button class="mmleft actionbutton" onclick="cloak()">
+        Cloak in about:blank
+      </button>
+      <div class="space"></div>
+      <h1 class="mleft space typew" data-text="Panic Switch"></h1>
+      <button class="mmleft space" onclick="togglePanic();">
+        Toggle Panic Switch</button
+      ><br />
+      <label for="panicurl" class="mmleft">Panic URL</label><br />
+      <input
+        type="text"
+        id="panicurl"
+        class="mmleft space"
+        placeholder="https://google.com"
+      />
+      <h1 class="mleft space typew" data-text="Proxy"></h1>
+      <label for="prxyl" class="mmleft">Default Proxy Link</label><br />
+      <input
+        type="text"
+        id="prxyl"
+        class="mmleft"
+        placeholder="https://x.x.xxxxx.tw/"
+      /><br />
+      <p class="mmleft space">
+        <a href="list.html">full links list (30+ links)</a>
+      </p>
+      <h1 class="mleft space typew" data-text="Clear site data"></h1>
+      <h3 class="mleft space action">fixes issues, resets settings</h3>
+      <button
+        onclick="localStorage.clear();deleteAllCookies();location.reload();"
+        class="mmleft space actionbutton"
+      >
+        Clear
+      </button>
+      <p class="mleft">
+        <a
+          href="https://docs.google.com/document/d/1hOsVR7Umwxfmg7RA0xUaQtzFr39AusQpLxCamM7VVKg/edit?usp=sharing"
+          >Docs</a
+        >
+      </p>
+      <p class="mleft">v0.6 beta</p>
+      <p class="mleft space">Copyright &copy; 2023 Lunar Eclipse</p>
+    </div>
+    <footer class="footer"></footer>
+    <script src="../script.js"></script>
+    <script src="settings.js"></script>
+  </body>
+</html>

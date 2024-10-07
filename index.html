@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lunar Eclipse 2.0</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/logo.png"
+      type="image/x-icon"
+      class="favicon"
+    />
+    <script src="//ut1l.pages.dev/util.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1abfab8baa.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="utils/proxy.html">Prxy</a>
+      <a href="utils/games.html">Gxmes</a>
+      <a href="utils/settings.html">Settings</a>
+      <div class="right">
+        <button class="panic">Panic Switch [`]</button>
+        <p id="time">loading...</p>
+      </div>
+    </nav>
+    <div class="line"></div>
+    <div class="content">
+      <div class="title">
+        <i class="fa-solid fa-moon"></i><br large />
+        <div class="space"></div>
+        Lunar Eclipse 2.0
+      </div>
+      <h1 class="center mtop mm">Welcome</h1>
+      <div class="space"></div>
+      <h1 class="mleft space typew" data-text="Choose an option"></h1>
+      <button
+        class="mmleft space actionbutton"
+        onclick="redir('utils/proxy.html')"
+      >
+        Prxy</button
+      ><br />
+      <button
+        class="mmleft space actionbutton"
+        onclick="redir('utils/games.html')"
+      >
+        Gxmes
+      </button>
+      <h2 class="mleft space">Customization Options...</h2>
+      <button
+        class="mmleft space actionbutton"
+        onclick="redir('utils/settings.html')"
+      >
+        Settings
+      </button>
+      <h2 class="mleft">Hide your history...</h2>
+      <h4 class="mleft space">Cloaking</h4>
+      <button class="mmleft actionbutton" onclick="cloak()">
+        Cloak in about:blank
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lunar Eclipse 2.0</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/logo.png"
+      type="image/x-icon"
+      class="favicon"
+    />
+    <script src="//ut1l.pages.dev/util.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1abfab8baa.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="nav" id="nav">
+      <a href="../index.html">Home</a>
+      <a href="proxy.html" class="active">Prxy</a>
+      <a href="games.html">Gxmes</a>
+      <a href="settings.html">Settings</a>
+      <div class="right">
+        <button class="panic">Panic Switch [`]</button>
+        <p id="time">loading...</p>
+      </div>
+    </nav>
+    <div class="line"></div>
+    <div class="content">
+      <div class="title">
+        <i class="fa-solid fa-moon"></i><br large />
+        <div class="space"></div>
+        Proxy
+      </div>
+      <h1 class="center mtop mm">
+        If blocked, go to settings and change the link.
+      </h1>
+      <div class="space"></div>
+      <h1 class="mleft space typew" data-text="Tools"></h1>
+      <button class="mmleft actionbutton" onclick="redir('prxy/default.html')">
+        Default Proxy
+      </button>
+      <br />
+      <br />
+      <button class="mmleft actionbutton" onclick="redir('prxy/caub.html')">
+        CAUB - Prevent automatic updates
+      </button>
+      <br />
+      <br />
+      <button class="mmleft actionbutton" onclick="redir('prxy/caub_old.html')">
+        CAUB (old)
+      </button>
+      <br />
+      <br />
+      <button class="mmleft actionbutton" onclick="redir('prxy/nppe.html')">
+        NPPE - Extract wifi passwords
+      </button>
+      <br />
+      <br />
+      <button class="mmleft actionbutton" onclick="redir('prxy/sipe.html')">
+        SIPE - Extract wifi passwords (requires CAUB)
+      </button>
+      <br />
+      <br />
+      <button
+        class="mmleft actionbutton"
+        onclick="redir('prxy/dextensify.html')"
+      >
+        DEXTENSIFY - Temporarily disable/freeze extensions
+      </button>
+      <br />
+      <br />
+      <button
+        class="mmleft actionbutton"
+        onclick="window.open(`${prompt('Enter Link:').replaceAll('.', '-')}.translate.goog/?gws_rd=ssl&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp&_x_tr_hist=true`)"
+      >
+        TRANSLATE UNBLOCKER - shitty method, only works sometimes
+      </button>
+      <br />
+      <br />
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>

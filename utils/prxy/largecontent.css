@@ -1,0 +1,19 @@
+.content {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: calc(100vh - 42px);
+  bottom: 0;
+  top: 40px;
+  background: white !important;
+}
+
+.onright {
+  right: 15px;
+  left: unset;
+}
+
+.onbottom {
+  top: unset;
+  bottom: 15px;
+}
