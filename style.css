@@ -243,6 +243,31 @@ a {
   font-weight: bold;
 }
 
+a:hover:not(nav a) {
+  text-decoration: underline;
+}
+
+.link {
+  cursor: cell;
+  text-decoration: none !important;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.link_click:hover {
+  text-decoration: underline !important;
+}
+
+.link.rh {
+  color: rgb(137, 207, 209);
+}
+
+.link.em {
+  color: rgb(216, 255, 158);
+}
+
 .actionbutton {
   border: none;
   padding: 7px 12px;

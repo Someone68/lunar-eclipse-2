@@ -64,12 +64,27 @@ list_rh = [
   "https://kamiappp.streetdirectory.sg/",
   "https://hallolah.gryffindor.se/",
 ];
+
+let openl = false;
+
 list_rh.forEach((link) => {
   document.querySelector("#list").innerHTML +=
-    `<a href='javascript:void(0)' onclick='localStorage.prxylink = "${link}";alert("Set ${link.replace(
-      "https://",
-      ""
-    )} as default proxy link.");'> [RH] ` +
-    link +
-    "</a>\n";
+    `<a class='link rh'> [RH] ` + link + "</a>\n";
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+  qsall(".link").forEach((element) => {
+    element.addEventListener("click", () => {
+      clicklink(element.innerHTML.replace("[RH] ", "").replace("[EM] ", ""));
+    });
+  });
+});
+
+function clicklink(link) {
+  if (openl) {
+    window.open(link);
+  } else {
+    localStorage.prxylink = link;
+    alert("Set " + link.replace("https://", "") + " as default proxy link.");
+  }
+}
