@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>prxy</title>
     <link href="../../style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="largecontent.css" />
+    <link rel="stylesheet" href="../prxy/largecontent.css" />
     <script
       src="https://kit.fontawesome.com/1abfab8baa.js"
       crossorigin="anonymous"
@@ -22,8 +22,8 @@
   <body>
     <nav class="nav" id="nav">
       <a href="../../index.html">Home</a>
-      <a href="../proxy.html" class="active">Proxy</a>
-      <a href="../games.html">Games</a>
+      <a href="../proxy.html">Proxy</a>
+      <a href="../games.html" class="active">Games</a>
       <a href="../settings.html">Settings</a>
       <div class="right">
         <button onclick="hideNav()" style="padding: 2px 7px">
@@ -39,12 +39,14 @@
         Show navagation Bar
       </button>
       <iframe
-        src="imported/caub.html"
+        src=""
+        id="gameembed"
         frameborder="0"
         width="100%"
         height="100%"
       ></iframe>
     </div>
     <script src="../../script.js"></script>
+    <script src="launchgame.js"></script>
   </body>
 </html>
