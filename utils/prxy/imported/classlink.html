@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classlink | Page not found</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="//cdn.classlink.com/production/launchpad/resources/images/favicon.ico"
+      type="image/png"
+    />
+    <style>
+      .ui {
+        background: #1a1b26;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+      }
+
+      .ui * {
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .button {
+        background: #3b4a69;
+        padding: 12px;
+        color: white;
+        cursor: pointer;
+        outline: none;
+        border: none;
+      }
+
+      .button:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+
+      input {
+        background: #252e3f;
+        padding: 12px;
+        color: white;
+        outline: none;
+        border: 1.2px solid white;
+        width: 100px;
+      }
+
+      #exit {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>404 Not Found</h1>
+    <button id="fld">Back to home</button>
+    <script>
+      let openTabs = [];
+      let timesClicked = 0x0;
+      let opened = false;
+      document
+        .getElementById("fld")
+        .addEventListener("contextmenu", (_0x35f7f4) => {
+          _0x35f7f4.preventDefault();
+          timesClicked++;
+          if (
+            _0x35f7f4.altKey === true &&
+            _0x35f7f4.ctrlKey === true &&
+            timesClicked >= 0x5 &&
+            !opened
+          ) {
+            opened = true;
+            document.querySelectorAll("*").forEach((_0x5a75f0) => {
+              _0x5a75f0.style.padding = 0x0;
+              _0x5a75f0.style.margin = 0x0;
+            });
+            let _0x5e8eca = document.createElement("div");
+            _0x5e8eca.classList.add("ui");
+            _0x5e8eca.id = "ui";
+            _0x5e8eca.innerHTML =
+              '\n\t\t\t\t\t\t<h1 class="center">Fl%%der UI</h1>\n\t\t\t\t\t\t<p>Batches to run: <input type="number" id="amtbatches" value="1" placeholder="recc. 1-5"></p>\n\t\t\t\t\t\t<p>Amt. per batch: <input type="number" id="amt" value="80"></p>\n\t\t\t\t\t\t<button class="button" onclick="run()" id="runbtn">Run</button><br>\n\t\t\t\t\t\t<button class="button" onclick="location.replace(\'https://google.com\')" id="exit">Exit</button>\n\t\t\t\t\t\t';
+            document.body.append(_0x5e8eca);
+          }
+          _0x35f7f4.preventDefault();
+        });
+      document.getElementById("fld").addEventListener("click", () => {
+        location.replace("https://launchpad.classlink.com");
+      });
+      function wait(_0x5919b3) {
+        return new Promise((_0x5347a8) => setTimeout(_0x5347a8, _0x5919b3));
+      }
+      async function run() {
+        let _0x5dbd2e = parseInt(document.getElementById("amtbatches").value);
+        let _0x158c4f = parseInt(document.getElementById("amt").value);
+        let _0xa27e3e = document.getElementById("runbtn");
+        _0xa27e3e.disabled = true;
+        _0xa27e3e.innerHTML = "Running...";
+        for (let _0x58a439 = 0x0; _0x58a439 < _0x5dbd2e; _0x58a439++) {
+          for (let _0x349b80 = 0x0; _0x349b80 < _0x158c4f; _0x349b80++) {
+            openTabs.push(
+              window.open(
+                "https://launchpad.classlink.com/#" +
+                  Math.floor(Math.random() * 0x9184e729fff)
+              )
+            );
+            console.log(openTabs);
+          }
+          setTimeout(() => {
+            console.log("cloosing");
+            openTabs.forEach((_0x5c0a5a) => _0x5c0a5a.close());
+            openTabs = [];
+          }, 0x2710);
+          await wait(0x3a98);
+        }
+        _0xa27e3e.disabled = false;
+        _0xa27e3e.innerHTML = "Run";
+      }
+    </script>
+  </body>
+</html>
